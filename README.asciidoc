@@ -1,0 +1,7 @@
+spring-http-httpcomponents
+==========================
+David Thomas Hume
+:Author Initials: DTH
+
+Implementation of Springs Http Client interface over Apache HTTP
+Client 4.
