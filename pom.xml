@@ -42,7 +42,7 @@
       <id>spring.dthu.me.web</id>
       <name>Spring HTTP HttpComponents Maven Website</name>
       <url>
-        file://opt/maven/sites/org/dthume/spring/${project.artifactId}/${project.version}/
+        file:///opt/maven/sites/org/dthume/spring/${project.artifactId}/${project.version}/
       </url>
     </site>
   </distributionManagement>
