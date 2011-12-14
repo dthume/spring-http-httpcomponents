@@ -25,7 +25,7 @@
 
   <name>Spring Http - HttpComponents</name>
   <inceptionYear>2011</inceptionYear>
-  <url>https://github.com/dthume/${project.artifactId}</url>
+  <url>https://dthu.me/projects/org/dthume/spring/${project.artifactId}/${project.version}/</url>
 
   <description>
     Integration of the Spring HTTP API to Apache Commons HttpComponents.
@@ -42,7 +42,7 @@
       <id>spring.dthu.me.web</id>
       <name>Spring HTTP HttpComponents Maven Website</name>
       <url>
-        scp://dthu.me/home/dth/sites/org/dthume/spring/${project.artifactId}/${project.version}/
+        file://opt/maven/sites/org/dthume/spring/${project.artifactId}/${project.version}/
       </url>
     </site>
   </distributionManagement>
