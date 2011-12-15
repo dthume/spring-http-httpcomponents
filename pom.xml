@@ -9,7 +9,7 @@
   
   <parent>
     <groupId>org.dthume</groupId>
-    <artifactId>dthume-parent</artifactId>
+    <artifactId>dthume-public</artifactId>
     <version>0.1-SNAPSHOT</version>
   </parent>
 
