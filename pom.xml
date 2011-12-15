@@ -20,7 +20,7 @@
 
   <name>Spring HttpComponents</name>
   <inceptionYear>2011</inceptionYear>
-  <url>https://dthu.me/projects/org/dthume/spring/${project.artifactId}/${project.version}/</url>
+  <url>http://dthu.me/projects/org/dthume/spring/${project.artifactId}/${project.version}/</url>
 
   <description>
     Integration of the Spring HTTP API to Apache Commons HttpComponents.
