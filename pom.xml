@@ -5,17 +5,12 @@
     http://maven.apache.org/POM/4.0.0
     http://maven.apache.org/xsd/maven-4.0.0.xsd">
   
-  <prerequisites>
-    <maven>3.0</maven>
-  </prerequisites>
-  
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
     <groupId>org.dthume</groupId>
     <artifactId>dthume-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <groupId>org.dthume.spring</groupId>
@@ -23,7 +18,7 @@
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Spring Http - HttpComponents</name>
+  <name>Spring HttpComponents</name>
   <inceptionYear>2011</inceptionYear>
   <url>https://dthu.me/projects/org/dthume/spring/${project.artifactId}/${project.version}/</url>
 
