@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>Spring HttpComponents - Checkstyle report</title>
+    <link>https://dthume.github.com/spring-http-httpcomponents/</link>
+    <description>Spring HttpComponents - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2011</copyright>
+    <item>
+      <title>File: 2,
+             Errors: 125,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>https://dthume.github.com/spring-http-httpcomponents//checkstyle.html</link>
+      <description>
+        <p>Click <a href="https://dthume.github.com/spring-http-httpcomponents//checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="https://dthume.github.com/spring-http-httpcomponents//checkstyle.html#org.dthume.spring.http.client.httpcomponents.HttpComponentsClientRequestFactory.java">org/dthume/spring/http/client/httpcomponents/HttpComponentsClientRequestFactory.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  106
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://dthume.github.com/spring-http-httpcomponents//checkstyle.html#org.dthume.spring.http.client.httpcomponents.HttpComponentsClientException.java">org/dthume/spring/http/client/httpcomponents/HttpComponentsClientException.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
