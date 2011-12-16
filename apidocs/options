@@ -1,24 +1,24 @@
 -classpath
-'/var/lib/hudson/jobs/spring-http-httpcomponents/workspace/target/classes:/var/lib/hudson/.m2/repository/org/apache/commons/commons-lang3/3.0.1/commons-lang3-3.0.1.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-beans/3.0.6.RELEASE/spring-beans-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/org/apache/httpcomponents/httpclient/4.1.2/httpclient-4.1.2.jar:/var/lib/hudson/.m2/repository/org/apache/httpcomponents/httpcore/4.1.2/httpcore-4.1.2.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-web/3.0.6.RELEASE/spring-web-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-asm/3.0.6.RELEASE/spring-asm-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-core/3.0.6.RELEASE/spring-core-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-aop/3.0.6.RELEASE/spring-aop-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/org/dthume/dthume-shared-resources/0.1-SNAPSHOT/dthume-shared-resources-0.1-SNAPSHOT.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-expression/3.0.6.RELEASE/spring-expression-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-context/3.0.6.RELEASE/spring-context-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar'
+'/var/lib/hudson/jobs/Release_spring-http-httpcomponents/workspace/target/checkout/target/classes:/var/lib/hudson/.m2/repository/org/apache/commons/commons-lang3/3.0.1/commons-lang3-3.0.1.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-beans/3.0.6.RELEASE/spring-beans-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/org/apache/httpcomponents/httpclient/4.1.2/httpclient-4.1.2.jar:/var/lib/hudson/.m2/repository/org/apache/httpcomponents/httpcore/4.1.2/httpcore-4.1.2.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-web/3.0.6.RELEASE/spring-web-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-asm/3.0.6.RELEASE/spring-asm-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-core/3.0.6.RELEASE/spring-core-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-aop/3.0.6.RELEASE/spring-aop-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/org/dthume/dthume-shared-resources/0.1/dthume-shared-resources-0.1.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-expression/3.0.6.RELEASE/spring-expression-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/var/lib/hudson/.m2/repository/org/springframework/spring-context/3.0.6.RELEASE/spring-context-3.0.6.RELEASE.jar:/var/lib/hudson/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar'
 -encoding
 'UTF-8'
 -protected
 -sourcepath
-'/var/lib/hudson/jobs/spring-http-httpcomponents/workspace/src/main/java'
+'/var/lib/hudson/jobs/Release_spring-http-httpcomponents/workspace/target/checkout/src/main/java'
 -author
 -bottom
 'Copyright &#169; 2011. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
-'/var/lib/hudson/jobs/spring-http-httpcomponents/workspace/target/site/apidocs'
+'/var/lib/hudson/jobs/Release_spring-http-httpcomponents/workspace/target/checkout/target/site/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
-'Spring HttpComponents 0.1-SNAPSHOT API'
+'Spring HttpComponents 0.1 API'
 -linkoffline
-'http://download.oracle.com/javase/6/docs/api' '/var/lib/hudson/jobs/spring-http-httpcomponents/workspace/target/javadoc-bundle-options'
+'http://download.oracle.com/javase/6/docs/api' '/var/lib/hudson/jobs/Release_spring-http-httpcomponents/workspace/target/checkout/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'Spring HttpComponents 0.1-SNAPSHOT API'
+'Spring HttpComponents 0.1 API'
