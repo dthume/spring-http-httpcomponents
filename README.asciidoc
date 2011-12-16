@@ -5,3 +5,6 @@ David Thomas Hume
 
 Implementation of Springs Http Client interface over Apache HTTP
 Client 4.
+
+The Maven generated project site can be found
+http://dthume.github.com/spring-http-httpcomponents[here].
