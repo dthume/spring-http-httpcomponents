@@ -40,7 +40,6 @@
     <junit.version>4.10</junit.version>
     <org.apache.commons.commons-lang3.version>3.0.1</org.apache.commons.commons-lang3.version>
     <org.apache.httpcomponents.httpclient.version>4.1.2</org.apache.httpcomponents.httpclient.version>
-    <org.easymock.version>3.1</org.easymock.version>
     <org.springframework.version>3.0.6.RELEASE</org.springframework.version>
   </properties>
 
@@ -54,7 +53,6 @@
     <dependency>
       <groupId>org.easymock</groupId>
       <artifactId>easymock</artifactId>
-      <version>${org.easymock.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>

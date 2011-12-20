@@ -48,53 +48,59 @@ import org.springframework.http.client.ClientHttpResponse;
 /**
  * Implementation of {@link ClientHttpRequestFactory} based upon Apache
  * HttpComponents/client.
- * 
+ *
  * @see http://hc.apache.org/httpcomponents-client-ga/index.html
- * 
+ *
  * @author dth
  */
-public class HttpComponentsClientRequestFactory
+public final class HttpComponentsClientRequestFactory
     implements ClientHttpRequestFactory {
 
-    private HttpClient client;
-    
+    private final HttpClient client;
+
     public HttpComponentsClientRequestFactory() {
         this(new DefaultHttpClient());
     }
-    
-    public HttpComponentsClientRequestFactory(HttpClient client) {
+
+    public HttpComponentsClientRequestFactory(final HttpClient client) {
         this.client = client;
     }
-    
+
     public ClientHttpRequest createRequest(final URI uri,
             final HttpMethod method) {
         return new ClientRequest(uri, method);
     }
-    
+
     private class ClientRequest extends AbstractClientHttpRequest {
-        
+
         private final URI uri;
         private final HttpMethod method;
-        
+
         ClientRequest(final URI uri, final HttpMethod method) {
             this.uri = uri;
             this.method = method;
         }
-        
-        public URI getURI() { return uri; }
-        public HttpMethod getMethod() { return method; }
-        
+
+        public URI getURI() {
+            return uri;
+        }
+
+        public HttpMethod getMethod() {
+            return method;
+        }
+
         @Override
-        protected ClientHttpResponse executeInternal(HttpHeaders headers,
-                byte[] bufferedOutput) throws IOException {
-            
+        protected ClientHttpResponse executeInternal(
+                final HttpHeaders headers,
+                final byte[] bufferedOutput) throws IOException {
+
             final HttpUriRequest request = createRequest();
             addHeaders(request, headers);
             addBody(request, bufferedOutput);
-            
+
             final HttpResponse response = client.execute(request);
             final HttpHeaders responseHeaders = toHttpHeaders(response);
-            
+
             return new ClientHttpResponse() {
                 public InputStream getBody() throws IOException {
                     return response.getEntity().getContent();
@@ -105,8 +111,7 @@ public class HttpComponentsClientRequestFactory
                 }
 
                 public HttpStatus getStatusCode() throws IOException {
-                    final int status =
-                            response.getStatusLine().getStatusCode();
+                    final int status = response.getStatusLine().getStatusCode();
                     return HttpStatus.valueOf(status);
                 }
 
@@ -118,45 +123,56 @@ public class HttpComponentsClientRequestFactory
                     try {
                         EntityUtils.consume(response.getEntity());
                     } catch (IOException e) {
-                        throw new HttpComponentsClientException("Caught exception consuming repsonse content", e);
+                        throw new HttpComponentsClientException(
+                                "Caught exception consuming repsonse content",
+                                e);
                     }
                 }
             };
         }
-        
+
         private HttpUriRequest createRequest() {
-            final URI uri = getURI();
-            final HttpMethod method = getMethod();
-            
-            switch(method) {
-            case DELETE: return new HttpDelete(uri);
-            case GET: return new HttpGet(uri);
-            case HEAD: return new HttpHead(uri);
-            case PUT: return new HttpPut(uri);
-            case POST: return new HttpPost(uri);
-            case OPTIONS: return new HttpOptions(uri);
+            final URI requestUri = getURI();
+            final HttpMethod requestMethod = getMethod();
+
+            switch (requestMethod) {
+            case DELETE:
+                return new HttpDelete(requestUri);
+            case GET:
+                return new HttpGet(requestUri);
+            case HEAD:
+                return new HttpHead(requestUri);
+            case PUT:
+                return new HttpPut(requestUri);
+            case POST:
+                return new HttpPost(requestUri);
+            case OPTIONS:
+                return new HttpOptions(requestUri);
+            default:
+                final String msg = "Unknown Http Method: " + requestMethod;
+                throw new IllegalArgumentException(msg);
             }
-            
-            throw new IllegalArgumentException("Unknown Http Method: " + method);
         }
-        
+
         private HttpHeaders toHttpHeaders(final HttpResponse response) {
             final HttpHeaders headers = new HttpHeaders();
             for (final Header header : response.getAllHeaders())
                 headers.add(header.getName(), header.getValue());
             return headers;
         }
-        
-        private void addHeaders(HttpUriRequest request, HttpHeaders headers) {
-            for (Map.Entry<String, List<String>>entry : headers.entrySet())
+
+        private void addHeaders(final HttpUriRequest request,
+                final HttpHeaders headers) {
+            for (Map.Entry<String, List<String>> entry : headers.entrySet())
                 for (final String value : entry.getValue())
                     request.addHeader(entry.getKey(), value);
         }
-        
-        private void addBody(HttpRequest request, byte[] output) {
+
+        private void addBody(final HttpRequest request,
+                final byte[] output) {
             if (request instanceof HttpEntityEnclosingRequest) {
                 final HttpEntity entity = new ByteArrayEntity(output);
-                ((HttpEntityEnclosingRequest)request).setEntity(entity);
+                ((HttpEntityEnclosingRequest) request).setEntity(entity);
             }
         }
     }

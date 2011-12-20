@@ -15,22 +15,27 @@
  */
 package org.dthume.spring.http.client.httpcomponents;
 
+/** Wrapper for HttpComponents Exceptions. */
 public class HttpComponentsClientException
     extends RuntimeException {
+
+    /** For serialization. */
+    private static final long serialVersionUID = 1L;
 
     public HttpComponentsClientException() {
         super();
     }
 
-    public HttpComponentsClientException(String arg0, Throwable arg1) {
-        super(arg0, arg1);
+    public HttpComponentsClientException(final String msg,
+            final Throwable cause) {
+        super(msg, cause);
     }
 
-    public HttpComponentsClientException(String arg0) {
-        super(arg0);
+    public HttpComponentsClientException(final String msg) {
+        super(msg);
     }
 
-    public HttpComponentsClientException(Throwable arg0) {
-        super(arg0);
+    public HttpComponentsClientException(final Throwable cause) {
+        super(cause);
     }
 }
