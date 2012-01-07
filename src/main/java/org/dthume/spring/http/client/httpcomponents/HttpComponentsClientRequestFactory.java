@@ -38,7 +38,7 @@ public final class HttpComponentsClientRequestFactory
     private static final String NULL_CLIENT =
         "HttpClient cannot be null when using single arg constructor";
 
-    private final HttpClient client;
+    private final transient HttpClient client;
 
     /** Create a new request factory with a {@link DefaultHttpClient}. */
     public HttpComponentsClientRequestFactory() {

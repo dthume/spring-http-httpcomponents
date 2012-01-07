@@ -15,8 +15,12 @@
  */
 package org.dthume.spring.http.client.httpcomponents;
 
-import static org.junit.Assert.*;
-import static org.easymock.EasyMock.*;
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.isA;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.reset;
+import static org.easymock.EasyMock.verify;
 
 import java.net.URI;
 
@@ -24,10 +28,8 @@ import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.client.ClientHttpRequest;
@@ -48,13 +50,13 @@ public class HttpComponentsClientRequestFactoryTest {
         reset(client, response);
     }
     
-    @After
-    public void verifyMocks() {
-        verify(client, response);
-    }
-    
     private void replayMocks() {
         replay(client, response);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testNullHttpClient() throws Exception {
+        new HttpComponentsClientRequestFactory(null);
     }
     
     @Test
@@ -72,7 +74,9 @@ public class HttpComponentsClientRequestFactoryTest {
         final ClientHttpRequest request = 
                 factory.createRequest(uri, HttpMethod.GET);
         
-        final ClientHttpResponse response = request.execute();
+        final ClientHttpResponse actualResponse = request.execute();
+        
+        verify(client, response);
     }
 
 }

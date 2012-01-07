@@ -48,9 +48,9 @@ import org.springframework.http.client.ClientHttpResponse;
 public final class HttpComponentsClientHttpRequest
     extends AbstractClientHttpRequest {
 
-    private final HttpClient client;
-    private final URI uri;
-    private final HttpMethod method;
+    private final transient HttpClient client;
+    private final transient URI uri;
+    private final transient HttpMethod method;
 
     public HttpComponentsClientHttpRequest(
             final HttpClient client,

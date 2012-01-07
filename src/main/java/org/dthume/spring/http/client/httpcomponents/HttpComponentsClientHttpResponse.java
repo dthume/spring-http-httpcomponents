@@ -34,8 +34,8 @@ import org.springframework.http.client.ClientHttpResponse;
 public final class HttpComponentsClientHttpResponse
     implements ClientHttpResponse {
 
-    private final HttpResponse response;
-    private final HttpHeaders responseHeaders;
+    private final transient HttpResponse response;
+    private final transient HttpHeaders responseHeaders;
 
     /** Create a client response based on the given {@link HttpResponse}. */
     public HttpComponentsClientHttpResponse(final HttpResponse response) {
