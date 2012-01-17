@@ -49,7 +49,7 @@
   <bean id="httpClientRequestFactory"
     class="org.dthume.spring.http.client.httpcomponents.HttpComponentsClientRequestFactory" />
 
-  <!-- Equivalent to -->
+  <!-- Or passing in a custom (in this case, default) HttpClient -->
 
   <bean id="httpClientRequestFactory"
     class="org.dthume.spring.http.client.httpcomponents.HttpComponentsClientRequestFactory">

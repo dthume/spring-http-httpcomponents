@@ -20,6 +20,10 @@
 
   <description>
     Integration of the Spring HTTP API to Apache Commons HttpComponents.
+    Note that this is only required for the 3.0.x releases of Spring,
+    since support for HttpComponents was added to the core framework
+    from 3.1 onwards, and users should prefer the core offering to this
+    artifact where possible. 
   </description>
 
   <scm>
